@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+$Pink: hsl(322, 100%, 66%);
+
+$Very-Pale-Cyan: hsl(193, 100%, 96%);
+$Very-Dark-Cyan: hsl(192, 100%, 9%);
+$Grayish-Blue: hsl(208, 11%, 55%);
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    margin-block: 2.2rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      margin-right: 2rem;
+    }
+  }
+}
+
+%headingCommons {
+  color: $Very-Dark-Cyan;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.heading {
+  @extend %headingCommons;
+  font-size: 2.5rem;
+}
+
+.heading2 {
+  @extend %headingCommons;
+  font-size: 1.8rem;
+}
+
+.heading3 {
+  @extend %headingCommons;
+}
+
+.paragraph {
+  color: $Very-Dark-Cyan;
+  font-size: 1.6rem;
+}
+
+.paragraph2 {
+  color: lighten($color: gray, $amount: 10%);
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.19) 1px 1px 5px,
+    rgba(0, 0, 0, 0.23) -0.5px -0.5px 5px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.btn-primary {
+  background-color: $Pink;
+  color: #fff;
+  margin-block: 1rem;
+  padding: 1rem 4rem;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+
+  &:hover {
+    background-color: lighten($color: $Pink, $amount: 10%);
+    transition: 2ms ease-in-out;
+  }
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: $Very-Dark-Cyan;
+  padding: 0.2rem 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+
+  &:hover {
+    color: gray;
+  }
+}
+
+%shadows {
+  box-shadow: 0 0 10px 5px darken($color: $Very-Pale-Cyan, $amount: 2%);
+  margin-block: 2rem;
+  border-radius: 1rem;
+}
